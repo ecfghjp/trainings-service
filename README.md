@@ -1,4 +1,4 @@
-#User Micro Service
+#Trainings Micro Service
 This repository contains functionality for `Training Microservice` developed in line with  the microservices architecture. The code demonstrates the CRUD actions performed on Training resource.
 
 The Microservice uses embedded `H2 database` to cut down the complexity but you can use your own db of choice. The Micro service connects to `Eureka server` on port 8761 and also connects to a [Zipkin server](https://search.maven.org/remote_content?g=io.zipkin&a=zipkin-server&v=LATEST&c=exec) server for logs tracing at port 9411.
