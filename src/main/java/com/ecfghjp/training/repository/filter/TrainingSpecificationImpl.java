@@ -11,8 +11,8 @@ import javax.persistence.criteria.Root;
 import org.springframework.data.jpa.domain.Specification;
 
 import com.ecfghjp.training.entities.Training;
-import com.ecfghjp.training.repository.valueobjects.SearchCriterea;
-import com.ecfghjp.training.repository.valueobjects.SearchOperation;
+import com.ecfghjp.training.repository.SearchObjects.SearchCriterea;
+import com.ecfghjp.training.repository.SearchObjects.SearchOperation;
 
 public class TrainingSpecificationImpl implements Specification<Training>{
 
