@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.time.LocalDateTime;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,14 +16,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import com.ecfghjp.training.entities.TEAM;
 import com.ecfghjp.training.entities.TRAINING_CATEGORY;
 import com.ecfghjp.training.entities.Training;
-import com.ecfghjp.training.exception.ApiError;
-import com.ecfghjp.training.exception.GlobalExceptionHandler;
 import com.ecfghjp.training.service.TrainingsService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 

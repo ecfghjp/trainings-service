@@ -1,5 +1,13 @@
 server:
-   port: 9001
+   port: 8443
+   ssl:
+      enabled: true
+      key-store-password: himAchAl@123
+      key-store: classpath:com.ecfghjp.com.p12
+      key-store-type: pkcs12
+      key-password: himAchAl@123
+      key-alias: selfsigned_localhost_sslserver
+   
 
 spring:
    application:
@@ -10,6 +18,7 @@ spring:
       add-mappings: false
    zipkin:
       base-url: http://127.0.0.1:9411/
+      
       
 eureka:
    client:

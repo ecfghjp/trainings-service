@@ -18,6 +18,8 @@
 	<properties>
 		<java.version>8</java.version>
 		<spring-cloud.version>2020.0.0</spring-cloud.version>
+		<unit-tests.skip>false</unit-tests.skip>
+		<integration-tests.skip>true</integration-tests.skip>
 	</properties>
 
 	<!-- https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter -->
@@ -25,6 +27,15 @@
 
 
 	<dependencies>
+		<!-- Rest Assured Library for IT -->
+		<!-- https://mvnrepository.com/artifact/com.jayway.restassured/rest-assured -->
+		<dependency>
+			<groupId>com.jayway.restassured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>2.9.0</version>
+			<scope>test</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
@@ -117,7 +128,42 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<skipTests>${unit-tests.skip}</skipTests>
+					<excludes>
+						<exclude>**/*IT.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-failsafe-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>integration-test</id>
+						<goals>
+							<goal>integration-test</goal>
+						</goals>
+						<configuration>
+							<skipTests>${integration-tests.skip}</skipTests>
+							<includes>
+								<include>**/*IT.class</include>
+							</includes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
+	<profiles>
+		<profile>
+			<id>integration</id>
+			<properties>
+				<unit-tests.skip>false</unit-tests.skip>
+				<integration-tests.skip>false</integration-tests.skip>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>

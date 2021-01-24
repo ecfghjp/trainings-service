@@ -37,6 +37,19 @@ This project returns the exception message with the right http code and message 
 The code uses javax.validation framework for implementig data vaidation for requests.
 The validation failures are thrown back as exceptions back to consumers with reason and occurence
 
+## Security
+Following API best practices are implemented in the project.
+- [Enable TLS security](https://tools.ietf.org/html/rfc8446)
+- [Test Your Dependencies and Find Spring Boot Vulnerabilities]
+- [Enable CSRF Protection] 
+- [Always have validations on at the server side and use post requests]
+- [Use a Content Security Policy for Spring Boot XSS Protection]
+- [Use Open ID connect for authentication]
+- [Hash your passwords and use char[] rather than strings]
+- [Store Secrets Securely]
+- [Do penetration testing]
+- [Code reviews from security team -- important]
+
 ## Code coverage
 ## Quality Check
 ## Sonarqube
