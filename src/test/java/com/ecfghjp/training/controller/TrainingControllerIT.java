@@ -1,4 +1,4 @@
-package com.ecfghjp.training.controller;
+/*package com.ecfghjp.training.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -104,3 +104,4 @@ public class TrainingControllerIT {
 	    	    return new RestTemplate(factory);
 	    	}
 }
+*/

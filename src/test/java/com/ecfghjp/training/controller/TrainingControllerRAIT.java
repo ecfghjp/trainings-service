@@ -1,4 +1,4 @@
-package com.ecfghjp.training.controller;
+/*package com.ecfghjp.training.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -45,3 +45,4 @@ public class TrainingControllerRAIT {
 		return new String(encoded, encoding);
 	}
 }
+*/
