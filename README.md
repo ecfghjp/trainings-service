@@ -21,7 +21,7 @@ For building and running the application you need:
 
 We can run the appplication locally in multiple ways on your local machine.
 
-One way is by running the `main` method of `com.ecfghjp.training.TrainingApplication` as a java application. This will start the server on port 9001.
+One way is by running the `main` method of `TrainingApplication` as a java application. This will start the server on port 9001.
 
 Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
 

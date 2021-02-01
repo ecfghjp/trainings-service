@@ -1,10 +1,16 @@
 package com.ecfghjp.training.entities;
 
+import java.util.List;
+
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+
+import org.hibernate.annotations.CollectionType;
+import org.hibernate.validator.internal.IgnoreForbiddenApisErrors;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,8 +33,9 @@ public class Training {
 	@NotNull(message="Training Name is required")
 	private String trainingName;
 	
+	@ElementCollection
 	@NotNull(message="Training Team should be one of the relevent Teams")
-	private TEAM trainingTeam;
+	private List<TrainingFor> trainingTargettedFor;
 	
 	@NotNull(message = "training link is not valid")
 	private String trainingLink;
@@ -39,6 +46,9 @@ public class Training {
 	@NotNull(message = "training environment is not valid")
 	private String trainingEnvironment;
 	
+	@ElementCollection
 	@NotNull(message = "training category is not valid")
-	private TRAINING_CATEGORY trainingCategory;
+	private List<TrainingCategory> trainingCategories;
+	
+	private int excpectedMaxNumberOfDays=20;
 }

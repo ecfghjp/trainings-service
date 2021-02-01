@@ -1,6 +1,6 @@
 package com.ecfghjp.training.entities;
 
-public enum TRAINING_CATEGORY {
+public enum TrainingCategory {
 	AWS_DEVOPS,
 	TYPESCRIPT,
 	NODEJS,

@@ -28,9 +28,9 @@ public class TrainingQuerySpecs {
 			trainingSpecificationImpl
 			.add(new SearchCriterea("trainingName", training.getTrainingName(), SearchOperation.MATCH));
 		}
-		if(training.getTrainingTeam()!=null) {
+		if(training.getTrainingTargettedFor()!=null) {
 			trainingSpecificationImpl
-			.add(new SearchCriterea("trainingTeam", training.getTrainingTeam(), SearchOperation.EQUAL));
+			.add(new SearchCriterea("trainingTeams", training.getTrainingTargettedFor(), SearchOperation.EQUAL));
 		}
 		
 		trainingsList = trainingsRepository.findAll(trainingSpecificationImpl);

@@ -20,8 +20,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import com.ecfghjp.training.entities.TEAM;
-import com.ecfghjp.training.entities.TRAINING_CATEGORY;
+import com.ecfghjp.training.entities.TrainingFor;
+import com.ecfghjp.training.entities.TrainingCategory;
 import com.ecfghjp.training.entities.Training;
 import com.ecfghjp.training.exception.TrainingNotFoundException;
 import com.ecfghjp.training.service.TrainingsService;
@@ -53,11 +53,11 @@ class TrainingsControllerTest {
 		Training trainingVal = trainingsController.saveTraining(training);
 		
 		assertEquals(trainingVal.getTrainingId().longValue(), 1L);
-		assertEquals(trainingVal.getTrainingCategory(), TRAINING_CATEGORY.AWS_DEV);
+		assertEquals(trainingVal.getTrainingCategory(), TrainingCategory.AWS_DEV);
 		assertEquals(trainingVal.getTrainingEnvironment(), "Local");
 		assertEquals(trainingVal.getTrainingLink(), "http://abc.com");
 		assertEquals(trainingVal.getTrainingPlatform(), "Online");
-		assertEquals(trainingVal.getTrainingTeam(), TEAM.SENIOR_DEV);
+		assertEquals(trainingVal.getTrainingTeam(), TrainingFor.SENIOR_DEV);
 		assertEquals(trainingVal.getTrainingName(), "AWS Lambda");
 
 
@@ -81,11 +81,11 @@ class TrainingsControllerTest {
 		List<Training> trainingValues = trainingsController.findTrainings(training);
 		Training trainingVal = trainingValues.get(0);
 		assertEquals(trainingVal.getTrainingId().longValue(), 1L);
-		assertEquals(trainingVal.getTrainingCategory(), TRAINING_CATEGORY.AWS_DEV);
+		assertEquals(trainingVal.getTrainingCategory(), TrainingCategory.AWS_DEV);
 		assertEquals(trainingVal.getTrainingEnvironment(), "Local");
 		assertEquals(trainingVal.getTrainingLink(), "http://abc.com");
 		assertEquals(trainingVal.getTrainingPlatform(), "Online");
-		assertEquals(trainingVal.getTrainingTeam(), TEAM.SENIOR_DEV);
+		assertEquals(trainingVal.getTrainingTeam(), TrainingFor.SENIOR_DEV);
 		assertEquals(trainingVal.getTrainingName(), "AWS Lambda");
 	}
 	
