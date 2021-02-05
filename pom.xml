@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ecfghjp</groupId>
-	<artifactId>TrainingsService</artifactId>
+	<artifactId>training-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>TrainingsService</name>
-	<description>Demo project for Spring Boot</description>
+	<name>training-service</name>
+	<description>project for training</description>
 
 	<properties>
 		<java.version>8</java.version>
